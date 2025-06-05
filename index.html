@@ -19,7 +19,6 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#events">Events</a></li>
-                <li><a href="#youtube">YouTube</a></li>
                 <li><a href="#partners">Partners</a></li>
                 <li><a href="#connect">Connect</a></li>
             </ul>
@@ -28,10 +27,10 @@
 
     <main>
         <section id="home">
-            <div class="hero-content minimal-hero">
-                <img src="public/images/logo-clean.png" alt="Logo" class="hero-logo-minimal">
+            <div class="hero-content minimal-hero" style="position:relative;">
+                <img src="public/images/logo-clean.png" alt="Logo" class="hero-watermark-bg">
                 <h1>\J|B/Studio</h1>
-                <p class="hero-subtitle">Digital Creativity, Music & Projects</p>
+                <p class="hero-subtitle">Digital Creativity, Music, Events & Projects</p>
                 <a href="#projects" class="hero-cta-btn outline">View My Work</a>
             </div>
         </section>
@@ -39,14 +38,15 @@
         <section id="about">
             <h2>About</h2>
             <div class="about-card minimal-about">
-                <img src="public/images/profile.jpg" alt="Profile picture" class="about-profile-img minimal-profile">
-                <h3>Your Name</h3>
-                <p class="about-bio minimal-bio">A short bio about you, your passion, your style, and what makes you unique. For example: Creative developer, musician, and visionary focused on modern web technologies and sound design.</p>
+                <img src="public/images/Logo.png" alt="Profile picture" class="about-profile-img minimal-profile">
+                <h3>Jonas</h3>
+                <p class="about-bio minimal-bio">Hi, I'm Jonas.
+                    I make music, write code, and work with lighting and event technology. I love building experiences—both on stage and behind the scenes. When I'm not creating, you'll probably find me at a concert, somewhere in the crowd.</p>
                 <div class="about-skills minimal-skills">
                     <span class="about-skill minimal-skill">Web Development</span>
                     <span class="about-skill minimal-skill">Music Production</span>
-                    <span class="about-skill minimal-skill">UI/UX</span>
-                    <span class="about-skill minimal-skill">Creative Coding</span>
+                    <span class="about-skill minimal-skill">Event Technology</span>
+                    <span class="about-skill minimal-skill">Light Engineering</span>
                 </div>
             </div>
         </section>
@@ -56,12 +56,7 @@
             <div class="websites-grid">
                 <!-- Websites/Projects will be dynamically inserted here -->
             </div>
-            <div class="music-content">
-                <h3>Music</h3>
-                <div class="music-links">
-                    <!-- Music platform links will be inserted here -->
-                </div>
-            </div>
+            
         </section>
 
         <section id="events">
@@ -71,24 +66,11 @@
             </div>
         </section>
 
-        <section id="youtube">
-            <h2>YouTube</h2>
-            <div class="youtube-content">
-                <div class="youtube-header">
-                    <div class="youtube-channel-info">
-                        <img src="placeholder.jpg" alt="Channel thumbnail" class="channel-thumbnail">
-                        <div class="channel-stats">
-                            <h3>Channel Name</h3>
-                            <p>X subscribers</p>
-                        </div>
-                    </div>
-                    <a href="#" class="youtube-subscribe-btn" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                        Subscribe
-                    </a>
-                </div>
-                <div class="youtube-videos-grid">
-                    <!-- Videos will be dynamically inserted here -->
+        <section id="music">
+            <h2>Music</h2>
+            <div class="music-content">
+                <div class="music-links">
+                    <!-- Music platform links will be inserted here -->
                 </div>
             </div>
         </section>
@@ -103,23 +85,49 @@
         <section id="connect">
             <h2>Connect</h2>
             <div class="contact-content">
-                <div class="music-links">
-                    <!-- Social/Music links will be inserted here -->
+                <div class="connect-grid">
+                    <div class="connect-form">
+                        <h3>Get in Touch</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="connect-social">
+                        <h3>Follow Me</h3>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/jonas_b_studio/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@jonas_b_studio" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com/in/jonas-b-studio" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.x.com/jonas_b_studio" target="_blank" class="social-link"><i class="fa-brands fa-x"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 \J|B/Studio. All rights reserved.</p>
+        <p>&copy; 2025 \J|B/Studio. All rights reserved.</p>
     </footer>
 
     <script src="src/js/home.js"></script>
     <script src="src/js/about.js"></script>
     <script src="src/js/projects.js"></script>
     <script src="src/js/events.js"></script>
-    <script src="src/js/youtube.js"></script>
     <script src="src/js/partners.js"></script>
     <script src="src/js/connect.js"></script>
+    <script src="src/js/music.js"></script>
 </body>
 </html> 
