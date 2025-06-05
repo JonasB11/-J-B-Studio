@@ -71,11 +71,9 @@ nav {
     align-items: center;
     padding: 0.7rem 4vw 0.7rem 4vw;
     max-width: 1200px;
-    margin: 0 auto 1.5rem auto;
-    background: var(--navbar-bg);
+    margin: 0 auto auto auto;
     box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13);
     border-bottom: 2.5px solid var(--navbar-border);
-    backdrop-filter: var(--navbar-blur);
     border-radius: 0 0 1.2rem 1.2rem;
 }
 
