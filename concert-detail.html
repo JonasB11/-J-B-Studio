@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>\J|B/Studio - Concert Details</title>
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="subpage">
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <img src="public/images/logo-clean.png" alt="Logo" class="nav-logo-img">
+                <span class="logo-title">\J|B/Studio</span>
+            </div>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="concerts.html">Concerts</a></li>
+                <li><a href="index.html#partners">Partners</a></li>
+                <li><a href="index.html#connect">Connect</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="concert-detail">
+            
+
+            <div class="concert-header">
+                <div class="artist-profile">
+                    <img id="artist-image" src="" alt="Artist" class="artist-profile-image">
+                    <div class="artist-profile-info">
+                        <h2 id="concert-title">Loading...</h2>
+                        <div class="concert-date" id="concert-date"></div>
+                        <div class="artist-social-links">
+                            <a href="#" id="spotify-link" class="social-link" target="_blank">
+                                <i class="fab fa-spotify"></i>
+                            </a>
+                            <a href="#" id="youtube-link" class="social-link" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" id="instagram-link" class="social-link" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="concert-gallery" id="concert-gallery">
+                <!-- Images will be inserted here -->
+            </div>
+            
+            <div class="concert-info">
+                <div class="info-section">
+                    <h3>About the Artist</h3>
+                    <p id="artist-description"></p>
+                </div>
+
+                <div class="info-section">
+                    <h3>Concert Details</h3>
+                    <div class="concert-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="concert-venue"></span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span id="concert-date-full"></span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-music"></i>
+                            <span id="concert-songs-count"></span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-users"></i>
+                            <span id="concert-companions"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section" id="support-acts">
+                    <!-- Support acts will be inserted here -->
+                </div>
+                
+                <div class="info-section">
+                    <h3>Setlist</h3>
+                    <ul id="concert-setlist" class="setlist">
+                        <!-- Setlist will be inserted here -->
+                    </ul>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Highlights</h3>
+                    <ul id="concert-highlights" class="highlights">
+                        <!-- Highlights will be inserted here -->
+                    </ul>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Notes</h3>
+                    <p id="concert-notes"></p>
+                </div>
+            </div>
+            <a href="concerts.html" class="artist-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Concerts
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 \J|B/Studio. All rights reserved.</p>
+    </footer>
+
+    <script src="src/js/concerts-page.js"></script>
+    <script src="src/js/concert-detail.js"></script>
+</body>
+</html> 
