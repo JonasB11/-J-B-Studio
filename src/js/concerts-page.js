@@ -155,7 +155,7 @@ const concerts = [
             id: "artist1",
             name: "Rocco del Schlacko",
             genre: "Festival",
-            image: "public/images/artists/Swiss und die andern.jpg",
+            image: "public/images/artists/rocco.jpeg",
             details: {
                 venue: "Sauwasen",
                 city: "Püttlingen",
@@ -200,7 +200,7 @@ const concerts = [
             id: "artist1",
             name: "Lostboi Lino",
             genre: "Rap, Pop, Indie, Punk",
-            image: "public/images/artists/Swiss und die andern.jpg",
+            image: "public/images/artists/lino.jpeg",
             details: {
                 venue: "Kamgarn",
                 city: "Kaiserlautern",
@@ -211,25 +211,13 @@ const concerts = [
 
                 supportActs: [
                     {
-                        name: "Ferris MC",
+                        name: "Belucci Boy",
                         type: "Support Act"
-                    },
-                    {
-                        name: "Lostboi Lino",
-                        type: "Support Act"
-                    },
-                    {
-                        name: "Mehnersmoos",
-                        type: "Spezial Act"
-                    },
-                    {
-                        name: "Saltatio Mortis",
-                        type: "Spezial Act"
                     }
                 ]
             }
         },
-        description: "Swiss und die Andern are a German punk, rap, and hip-hop band formed in 2010. They are known for their political and social commentary in their music.",
+        description: "Lostboi Lino is a German rapper and singer-songwriter known for his unique blend of rap, pop, and indie music. His lyrics often explore themes of personal struggle, love, and social issues, resonating with a wide audience.",
         tags: ["First concert", "4 Support Acts", "First Moshpit"],
         companions: ["Logge", "Max", "Fynn", "Marita", "Jules", "Theresa"],
         event: ["Concert"],
@@ -245,7 +233,7 @@ const concerts = [
             "id": "mehnersmoos",
             "name": "Mehnersmoos",
             "genre": "Rap",
-            "image": "public/images/artists/mehnersmoos.jpg",
+            "image": "public/images/artists/mehnersmoos.png",
             "details": {
                 "venue": "Garage",
                 "city": "Saarbrücken",
@@ -290,7 +278,7 @@ const concerts = [
             "id": "thebutchersisters",
             "name": "The Butcher Sisters",
             "genre": "Beatdown Hardcore, Deutschrap, Crossover",
-            "image": "public/images/artists/the-butcher-sisters.jpg",
+            "image": "public/images/artists/tbs.jpg",
             "details": {
                 "venue": "Maimarktclub",
                 "city": "Mannheim",
@@ -397,7 +385,7 @@ const concerts = [
             "id": "ritterlean",
             "name": "Ritter Lean",
             "genre": "Indie Pop, Deutschrap",
-            "image": "public/images/artists/ritter-lean.jpg",
+            "image": "public/images/artists/ritterlean.webp",
             "details": {
                 "venue": "Kammgarn",
                 "city": "Kaiserslautern",
@@ -431,7 +419,7 @@ const concerts = [
             "id": "kiz",
             "name": "K.I.Z",
             "genre": "Hip-Hop, Rap, Satire",
-            "image": "public/images/artists/kiz.jpg",
+            "image": "public/images/artists/kiz.avif",
             "details": {
                 "venue": "Festhalle",
                 "city": "Frankfurt am Main",
@@ -562,7 +550,7 @@ const concerts = [
             "id": "yu",
             "name": "Yu",
             "genre": "Rap, Pop, Politischer Indie",
-            "image": "public/images/artists/yu.jpg",
+            "image": "public/images/artists/YU.webp",
             "details": {
                 "venue": "Zoom",
                 "city": "Frankfurt am Main",
