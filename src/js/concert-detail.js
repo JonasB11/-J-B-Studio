@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const concertId = urlParams.get('id');
 
     if (concertId) {
-        fetch('src/data/concerts.json')
+        fetch('/src/data/concerts.json')
             .then(response => response.json())
             .then(data => {
                 const concert = data.find(c => c.id === concertId);

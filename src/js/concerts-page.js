@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const timeline = document.getElementById('timeline');
 
-    fetch('src/data/concerts.json')
+    fetch('/src/data/concerts.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
