@@ -1,15 +1,86 @@
-// Get concert ID from URL
-const urlParams = new URLSearchParams(window.location.search);
-const concertId = urlParams.get('id');
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const concertId = urlParams.get('id');
 
-// Function to load concert details
-function loadConcertDetails() {
-    // Find the concert in our data
-    const concert = concerts.find(c => c.id === parseInt(concertId));
-    
-    if (!concert) {
-        document.querySelector('.concert-detail').innerHTML = '<p>Concert not found</p>';
-        return;
+    if (concertId) {
+        fetch('src/data/concerts.json')
+            .then(response => response.json())
+            .then(data => {
+                const concert = data.find(c => c.id === concertId);
+
+                if (concert) {
+                    document.getElementById('artist-image').src = concert.image;
+                    document.getElementById('concert-title').textContent = `${concert.artist} - ${concert.venue}, ${concert.city}`;
+                    document.getElementById('concert-date').textContent = new Date(concert.date).toLocaleDateString('de-DE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+                    document.getElementById('spotify-link').href = concert.socials.spotify || '#';
+                    document.getElementById('youtube-link').href = concert.socials.youtube || '#';
+                    document.getElementById('instagram-link').href = concert.socials.instagram || '#';
+
+                    document.getElementById('concert-description').textContent = concert.description;
+                    document.getElementById('songs-count').textContent = concert.songs_count;
+                    document.getElementById('companions').textContent = concert.companions.join(', ') || 'Keine';
+
+                    const supportActsList = document.getElementById('support-acts');
+                    if (concert.support_acts && concert.support_acts.length > 0) {
+                        concert.support_acts.forEach(act => {
+                            const li = document.createElement('li');
+                            if (act.link && act.link !== '#') {
+                                li.innerHTML = `<a href="${act.link}" target="_blank">${act.name}</a>`;
+                            } else {
+                                li.textContent = act.name;
+                            }
+                            supportActsList.appendChild(li);
+                        });
+                    } else {
+                        supportActsList.innerHTML = '<li>Keine</li>';
+                    }
+
+                    const setlist = document.getElementById('setlist');
+                    if (concert.setlist && concert.setlist.length > 0) {
+                        concert.setlist.forEach(song => {
+                            const li = document.createElement('li');
+                            li.textContent = song;
+                            setlist.appendChild(li);
+                        });
+                    } else {
+                        setlist.innerHTML = '<li>Nicht verfügbar</li>';
+                    }
+
+                    const highlights = document.getElementById('highlights');
+                    if (concert.highlights && concert.highlights.length > 0) {
+                        concert.highlights.forEach(highlight => {
+                            const li = document.createElement('li');
+                            li.textContent = highlight;
+                            highlights.appendChild(li);
+                        });
+                    } else {
+                        highlights.innerHTML = '<li>Keine besonderen Vorkommnisse</li>';
+                    }
+
+                    document.getElementById('notes').textContent = concert.notes || 'Keine Notizen vorhanden.';
+
+                    const gallery = document.getElementById('gallery');
+                    if (concert.gallery && concert.gallery.length > 0) {
+                        concert.gallery.forEach(imageSrc => {
+                            const img = document.createElement('img');
+                            img.src = imageSrc;
+                            gallery.appendChild(img);
+                        });
+                    } else {
+                        gallery.innerHTML = '<p>Keine Bilder verfügbar.</p>';
+                    }
+
+                } else {
+                    document.querySelector('.concert-detail').innerHTML = '<p>Konzert nicht gefunden.</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Error loading concert data:', error);
+                document.querySelector('.concert-detail').innerHTML = '<p>Fehler beim Laden der Konzertdetails.</p>';
+            });
+    } else {
+        document.querySelector('.concert-detail').innerHTML = '<p>Keine Konzert-ID angegeben.</p>';
     }
 
     // Set page title
@@ -105,7 +176,7 @@ function loadConcertDetails() {
     } else {
         galleryElement.style.display = 'none';
     }
-}
+});
 
 // Format date function
 function formatDate(dateString) {
