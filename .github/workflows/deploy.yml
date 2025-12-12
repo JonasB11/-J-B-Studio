@@ -1,0 +1,45 @@
+name: Deploy to Hetzner Webhosting M
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      # Falls du Node.js / React / Vue baust, aktiviere diese Schritte:
+      # - name: Use Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '20'
+      # - run: npm install
+      # - run: npm run build
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          # WICHTIG: Das ist der Ordner auf dem Server.
+          # Bei Hetzner ist es meist 'public_html'.
+          server-dir: /public_html/
+
+          # Falls du einen Build-Step hast (z.B. React/Vite),
+          # ändere dies zu './dist/' oder './build/':
+          local-dir: ./
+
+          # Dateien, die NICHT hochgeladen werden sollen:
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .github/**
+
