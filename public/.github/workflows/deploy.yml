@@ -34,7 +34,7 @@ jobs:
 
           # Falls du einen Build-Step hast (z.B. React/Vite),
           # ändere dies zu './dist/' oder './build/':
-          local-dir: /Users/JonasPrivat/WebstormProjects/-J-B-Studio/
+          local-dir: ./
 
           # Dateien, die NICHT hochgeladen werden sollen:
           exclude: |
