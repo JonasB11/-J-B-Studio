@@ -1,0 +1,13 @@
+.footer {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid var(--border-color);
+  opacity: 0.95;
+}
+
+.footer p {
+  margin: 0;
+}

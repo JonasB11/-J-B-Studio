@@ -1,0 +1,82 @@
+.section {
+  padding: 6rem 8vw;
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+  background: none;
+  box-sizing: border-box;
+  border-top: 1px solid var(--border-color);
+  padding-top: 4rem;
+}
+
+.sectionTitle {
+  text-align: left;
+  margin-bottom: 2.8rem;
+  color: var(--accent-color);
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.aboutCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem 1.5rem;
+  margin: 0 auto;
+  max-width: 420px;
+  text-align: center;
+}
+
+.profileImage {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-color);
+  background: var(--secondary-color);
+  margin-bottom: 1.2rem;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 0.7rem;
+  color: var(--accent-color);
+}
+
+.bio {
+  font-size: 1.01rem;
+  color: var(--text-color);
+  margin-bottom: 1.1rem;
+  line-height: 1.6;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.skill {
+  background: var(--text-secondary);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 1.2rem;
+  padding: 0.3rem 1.1rem;
+  font-size: 0.93rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.skill:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+}

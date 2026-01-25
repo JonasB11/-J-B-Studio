@@ -1,0 +1,70 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 7rem 2rem 5rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 1.1rem;
+  color: var(--accent-color);
+  letter-spacing: 0.06em;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+.ctaButton {
+  display: inline-block;
+  margin-top: 2.2rem;
+  padding: 1rem 2.8rem;
+  font-size: 1.18rem;
+  font-weight: 700;
+  border-radius: 2.5rem;
+  background: none;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  box-shadow: none;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.ctaButton:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  border-color: var(--accent-hover);
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
