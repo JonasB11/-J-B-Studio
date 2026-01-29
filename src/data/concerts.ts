@@ -481,7 +481,86 @@ export const concerts: Concert[] = [
     companions: ["Jules", "Theresa", "Logge", "Fernanda"],
     event: ["Concert"],
     images: []
-  }
+  },
+  {
+    id: 12,
+    date: "2025-06-18",
+    artist: {
+      id: "southside2025",
+      name: "Southside 2025",
+      genre: "Festival",
+      image: "/images/artists/YU.webp",
+      details: {
+        venue: "",
+        city: "Neuhaus ob Eck",
+        setlist: [
+        ],
+      }
+    },
+    description: "",
+    tags: ["Southside Festival 2025", "Festival"],
+    companions: ["Fynn", "Theresa", "Logge", "Fernanda", "Max"],
+    event: ["Festival"],
+    images: []
+  },
+  {
+    id: 13,
+    date: "2025-07-09",
+    artist: {
+      id: "linkinpark",
+      name: "Linkin Park",
+      genre: "Rap, Pop, Politischer Indie",
+      image: "/images/artists/YU.webp",
+      details: {
+        venue: "Deutsch Bank Park",
+        city: "Frankfurt am Main",
+        setlist: [
+          "Inception Intro B",
+          "Somewhere I Belong",
+          "Crawling",
+          "Cut the Bridge",
+          "New Divide",
+          "The Emptiness Machine",
+          "Creation Intro B",
+          "The Catalyst",
+          "Burn It Down",
+          "Up From the Bottom",
+          "Where'd You Go",
+          "Waiting for the End",
+          "Over Each Other",
+          "Two Faced",
+          "Joe Hahn Solo",
+          "Empty Spaces",
+          "When They Come for Me / Remember the Name",
+          "IGYEIH",
+          "One Step Closer",
+          "Break/Collapse",
+          "Lost",
+          "Good Things Go",
+          "What I've Done",
+          "Kintsugi",
+          "Overflow",
+          "Numb",
+          "A Place for My Head",
+          "Heavy Is the Crown",
+          "Bleed It Out",
+          "Resolution Intro B",
+          "Papercut",
+          "In the End",
+          "Faint"
+        ],
+        supportActs: [
+          { name: "JpegMafia", type: "Support Act" },
+          { name: "Architects", type: "Support Act/Spezial Act" }
+        ]
+      }
+    },
+    description: "",
+    tags: ["From Zero World Tour 2025", "Frankfurt"],
+    companions: ["Anton", "Leon"],
+    event: ["Concert"],
+    images: []
+  },
 ];
 
 export const getConcertById = (id: number): Concert | undefined => {
