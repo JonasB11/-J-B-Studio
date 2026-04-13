@@ -13,7 +13,7 @@ export function Hero() {
     <section id="home" className={styles.hero}>
       <div className={styles.heroContent}>
         <div>
-          <h1 className={styles.title}>Welcome to Jonas&apos; Digital World</h1>
+          <h1 className={styles.title}>Welcome to Jonas' Digital World</h1>
           <p className={styles.subtitle}>
             Explore my concert history, creative projects, collaborations and ideas.
           </p>
