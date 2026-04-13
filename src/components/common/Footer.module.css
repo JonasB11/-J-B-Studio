@@ -1,11 +1,9 @@
 .footer {
-  background: var(--secondary-color);
-  color: var(--text-color);
+  color: #7b95af;
   text-align: center;
-  padding: 2rem;
-  margin-top: 4rem;
-  border-top: 1px solid var(--border-color);
-  opacity: 0.95;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
 }
 
 .footer p {

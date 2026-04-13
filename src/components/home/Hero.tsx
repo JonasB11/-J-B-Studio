@@ -12,15 +12,20 @@ export function Hero() {
   return (
     <section id="home" className={styles.hero}>
       <div className={styles.heroContent}>
-        <h1 className={styles.title}>\J|B/Studio</h1>
-        <p className={styles.subtitle}>Digital Creativity, Music, Events & Projects</p>
-        <a
-          href="#projects"
-          className={styles.ctaButton}
-          onClick={handleScrollToProjects}
-        >
-          View My Work
-        </a>
+        <div>
+          <h1 className={styles.title}>Welcome to Jonas&apos; Digital World</h1>
+          <p className={styles.subtitle}>
+            Explore my concert history, creative projects, collaborations and ideas.
+          </p>
+          <a
+            href="#projects"
+            className={styles.ctaButton}
+            onClick={handleScrollToProjects}
+          >
+            Explore Sections
+          </a>
+        </div>
+        <img src="/images/Logo.png" alt="Jonas" className={styles.heroImage} />
       </div>
     </section>
   );
