@@ -7,7 +7,7 @@ import styles from './WatchedPage.module.css';
 import { useScrollToHash, useDocumentTitle } from '../hooks';
 
 export function WatchedPage() {
-  useDocumentTitle('\\J|B/Studio - Screening Room');
+  useDocumentTitle('\JB/Studio - Screening Room');
   useScrollToHash();
 
   const [filter, setFilter] = useState<WatchedType | 'All'>('All');
