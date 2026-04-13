@@ -1,96 +1,56 @@
 .section {
-  padding: 6rem 8vw;
-  max-width: 1200px;
-  margin: 0 auto 4rem auto;
-  background: none;
-  box-sizing: border-box;
-  border-top: 1px solid var(--border-color);
-  padding-top: 4rem;
+  padding: 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(86, 206, 255, 0.44);
+  background: linear-gradient(170deg, rgba(5, 18, 34, 0.95), rgba(4, 11, 22, 0.95));
+  box-shadow: 0 0 16px rgba(65, 106, 255, 0.22);
 }
 
 .sectionTitle {
-  text-align: left;
-  margin-bottom: 2.8rem;
-  color: var(--accent-color);
-  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.9rem;
+  color: #f2f9ff;
+  font-size: 1.6rem;
   font-weight: 800;
-  letter-spacing: 0.04em;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2.2rem;
-  margin-top: 2.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
 }
 
 .card {
-  background: var(--card-bg);
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--border-color);
-  padding: 1.5rem 1.2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 220px;
-  transition: box-shadow 0.3s, border-color 0.3s, transform 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 8px 24px 0 rgba(255, 0, 0, 0.13);
-  border-color: var(--accent-hover);
+  background: rgba(6, 17, 30, 0.92);
+  border-radius: 0.8rem;
+  overflow: hidden;
+  border: 1px solid rgba(117, 172, 255, 0.25);
 }
 
 .cardImage {
   width: 100%;
-  max-height: 140px;
+  height: 118px;
   object-fit: cover;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-  background: var(--secondary-color);
+}
+
+.cardContent {
+  padding: 0.55rem 0.6rem 0.65rem;
 }
 
 .cardTitle {
-  font-size: 1.13rem;
-  font-weight: 700;
-  color: var(--accent-color);
-  margin-bottom: 0.3rem;
-}
-
-.cardYear {
-  font-size: 0.98rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.5rem;
-}
-
-.cardDescription {
-  font-size: 0.97rem;
-  color: var(--text-color);
+  font-size: 0.84rem;
+  color: #ebf6ff;
   margin-bottom: 0.2rem;
+  line-height: 1.25;
 }
 
-.actions {
-  margin-top: 2rem;
-  text-align: center;
+.cardMeta {
+  color: #95adc6;
+  font-size: 0.68rem;
 }
 
-.concertLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 0.8rem 1.5rem;
-  border-radius: 1rem;
-}
-
-.concertLink:hover {
-  color: var(--accent-hover);
-  transform: translateX(5px);
-  background: rgba(0, 0, 0, 0.3);
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }

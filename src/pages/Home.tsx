@@ -6,20 +6,29 @@ import { Events } from '../components/home/Events';
 import { Music } from '../components/home/Music';
 import { Partners } from '../components/home/Partners';
 import { Connect } from '../components/home/Connect';
+import styles from './Home.module.css';
 
 export function Home() {
   useDocumentTitle();
   useScrollToHash();
 
   return (
-    <main>
-      <Hero />
-      <About />
-      <Projects />
-      <Events />
-      <Music />
-      <Partners />
-      <Connect />
+    <main className={styles.main}>
+      <div className={styles.dashboard}>
+        <div className={styles.column}>
+          <Hero />
+          <Events />
+          <Music />
+        </div>
+        <div className={styles.column}>
+          <Projects />
+          <About />
+        </div>
+        <div className={styles.column}>
+          <Partners />
+          <Connect />
+        </div>
+      </div>
     </main>
   );
 }

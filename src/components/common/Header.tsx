@@ -10,21 +10,18 @@ interface NavItem {
 
 const mainNavItems: NavItem[] = [
   { label: 'Home', to: '/#home', isHash: true },
-  { label: 'About', to: '/#about', isHash: true },
+  { label: 'Music', to: '/#events', isHash: true },
+  { label: 'Screening Room', to: '/#music', isHash: true },
   { label: 'Projects', to: '/#projects', isHash: true },
-  { label: 'Events', to: '/#events', isHash: true },
-  { label: 'Partners', to: '/#partners', isHash: true },
-  { label: 'Connect', to: '/#connect', isHash: true },
+  { label: 'Explorations', to: '/#about', isHash: true },
+  { label: 'Collaborations', to: '/#partners', isHash: true },
+  { label: 'Contact', to: '/#connect', isHash: true },
 ];
 
 const concertNavItems: NavItem[] = [
   { label: 'Home', to: '/' },
-  { label: 'About', to: '/#about', isHash: true },
-  { label: 'Projects', to: '/#projects', isHash: true },
-  { label: 'Events', to: '/#events', isHash: true },
+  ...mainNavItems.slice(1),
   { label: 'Concerts', to: '/concerts' },
-  { label: 'Partners', to: '/#partners', isHash: true },
-  { label: 'Connect', to: '/#connect', isHash: true },
 ];
 
 export function Header() {
@@ -36,7 +33,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 30);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -59,12 +56,7 @@ export function Header() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <nav className={styles.nav}>
         <NavLink to="/" className={styles.navLogo}>
-          <img
-            src="/images/logo-clean.png"
-            alt="Logo"
-            className={styles.navLogoImg}
-          />
-          <span className={styles.logoTitle}>\J|B/Studio</span>
+          <span className={styles.logoTitle}>JONAS B STUDIO</span>
         </NavLink>
         <ul className={styles.navList}>
           {navItems.map((item) => (
@@ -81,6 +73,7 @@ export function Header() {
             </li>
           ))}
         </ul>
+        <img src="/images/Logo.png" alt="Profile" className={styles.avatar} />
       </nav>
     </header>
   );

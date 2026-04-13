@@ -5,26 +5,27 @@ import styles from './Partners.module.css';
 export function Partners() {
   return (
     <section id="partners" className={styles.section}>
-      <h2 className={styles.sectionTitle}>Partners</h2>
+      <h2 className={styles.sectionTitle}>Partners & Collaborations</h2>
       <div className={styles.grid}>
-        {partners.map((partner) => (
-          <div key={partner.name} className={styles.card}>
+        {partners.slice(0, 3).map((partner) => (
+          <article key={partner.name} className={styles.card}>
             <ImageWithFallback
               src={partner.logo}
               alt={partner.name}
               className={styles.logo}
             />
-            <h3 className={styles.name}>{partner.name}</h3>
-            <p className={styles.link}>
+            <div>
+              <h3 className={styles.name}>{partner.name}</h3>
               <a
                 href={partner.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                className={styles.link}
               >
                 {partner.platform}
               </a>
-            </p>
-          </div>
+            </div>
+          </article>
         ))}
       </div>
     </section>
