@@ -1,26 +1,78 @@
 .concertListPage {
-  padding: 6rem 8vw;
-  max-width: 1200px;
-  margin: 0 auto;
-  background: none;
-  box-sizing: border-box;
-}
+   padding: 6rem 8vw;
+   max-width: 1200px;
+   margin: 0 auto;
+   background: none;
+   box-sizing: border-box;
+ }
 
-.title {
-  text-align: left;
-  margin-bottom: 2.8rem;
-  color: var(--accent-color);
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-}
+ .header {
+   margin-bottom: 2.8rem;
+ }
 
-.content {
-  /* Container for timeline */
-}
+ .backButton {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.6rem;
+   color: var(--text-secondary);
+   text-decoration: none;
+   font-size: 0.9rem;
+   font-weight: 600;
+   margin-bottom: 1.5rem;
+   padding: 0.5rem 1rem;
+   border-radius: 99px;
+   background: rgba(255, 255, 255, 0.05);
+   transition: all 0.2s ease;
+ }
 
-@media (max-width: 900px) {
-  .concertListPage {
-    padding: 5rem 3vw;
-  }
-}
+ .backButton:hover {
+   background: rgba(255, 255, 255, 0.1);
+   color: var(--text-color);
+   transform: translateX(-3px);
+ }
+
+ .title {
+   text-align: left;
+   color: var(--accent-color);
+   font-size: 2.5rem;
+   font-weight: 800;
+   letter-spacing: 0.04em;
+   margin: 0;
+ }
+
+ .content {
+   /* Container for timeline */
+ }
+
+ @media (max-width: 1024px) {
+   .concertListPage {
+     padding: 5.5rem 5vw;
+   }
+
+   .title {
+     font-size: 2.2rem;
+     margin-bottom: 2.5rem;
+   }
+ }
+
+ @media (max-width: 900px) {
+   .concertListPage {
+     padding: 5rem 3vw;
+   }
+
+   .title {
+     font-size: 2rem;
+     margin-bottom: 2rem;
+   }
+ }
+
+ @media (max-width: 600px) {
+   .concertListPage {
+     padding: 4rem 1rem;
+   }
+
+   .title {
+     font-size: 1.6rem;
+     margin-bottom: 1.5rem;
+   }
+ }

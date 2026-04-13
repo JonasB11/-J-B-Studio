@@ -15,32 +15,70 @@
 }
 
 .socialLinks {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.5rem;
+  display: flex;
+  gap: 0.8rem;
+  overflow-x: auto;
+  align-items: stretch;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(84, 204, 255, 0.3) transparent;
+}
+
+.socialLinks::-webkit-scrollbar {
+  height: 6px;
+}
+
+.socialLinks::-webkit-scrollbar-thumb {
+  background-color: rgba(84, 204, 255, 0.3);
+  border-radius: 3px;
 }
 
 .socialLink {
   color: #b8cde3;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 0.6rem;
   text-decoration: none;
-  padding: 0.5rem;
-  border-radius: 0.55rem;
+  padding: 1.2rem 1rem;
+  border-radius: 0.75rem;
   background: rgba(13, 29, 49, 0.95);
   border: 1px solid rgba(101, 148, 188, 0.3);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 600;
+  width: 140px;
+  min-width: 140px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.socialLink:hover {
+  background: rgba(101, 148, 188, 0.15);
+  transform: translateY(-3px);
+  border-color: rgba(101, 148, 188, 0.6);
 }
 
 .socialLink i {
-  font-size: 0.78rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
 }
 
 @media (max-width: 500px) {
   .socialLinks {
-    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .socialLink {
+    min-width: 110px;
+    width: 110px;
+    padding: 1rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .socialLink i {
+    font-size: 1.4rem;
   }
 }
+
+

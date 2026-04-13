@@ -9,6 +9,9 @@ import './styles/global.css';
 const Home = lazy(() => import('./pages/Home').then(m => ({ default: m.Home })));
 const Concerts = lazy(() => import('./pages/Concerts').then(m => ({ default: m.Concerts })));
 const ConcertDetailPage = lazy(() => import('./pages/ConcertDetailPage').then(m => ({ default: m.ConcertDetailPage })));
+const WatchedPage = lazy(() => import('./pages/WatchedPage').then(m => ({ default: m.WatchedPage })));
+const LightshowsPage = lazy(() => import('./pages/LightshowsPage').then(m => ({ default: m.LightshowsPage })));
+const AdminPage = lazy(() => import('./pages/admin/AdminPage').then(m => ({ default: m.AdminPage })));
 const NotFound = lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })));
 
 function Loading() {
@@ -48,6 +51,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/concerts" element={<Concerts />} />
             <Route path="/concerts/:id" element={<ConcertDetailPage />} />
+            <Route path="/watched" element={<WatchedPage />} />
+            <Route path="/lightshows" element={<LightshowsPage />} />
+            <Route path="/admin" element={<AdminPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

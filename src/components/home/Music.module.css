@@ -6,31 +6,74 @@
   box-shadow: 0 0 16px rgba(56, 198, 255, 0.2);
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+
 .sectionTitle {
-  text-align: center;
   color: #f2f9ff;
   font-size: 1.4rem;
   font-weight: 800;
+  margin: 0;
 }
 
 .subtitle {
   color: #91adc8;
-  text-align: center;
   font-size: 0.78rem;
-  margin: 0.1rem 0 0.9rem;
+  margin: 0.1rem 0 0;
+}
+
+.viewAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #5cd6ff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  background: rgba(92, 171, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.viewAll:hover {
+  background: rgba(92, 171, 255, 0.2);
+  color: #fff;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0.55rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: stretch;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 171, 255, 0.3) transparent;
+}
+
+.grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.grid::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 171, 255, 0.3);
+  border-radius: 3px;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background: rgba(8, 19, 34, 0.95);
   border-radius: 0.6rem;
   border: 1px solid rgba(92, 171, 255, 0.3);
   overflow: hidden;
+  width: 140px;
+  min-width: 140px;
+  flex-shrink: 0;
 }
 
 .poster {
@@ -39,21 +82,32 @@
   object-fit: cover;
 }
 
+.cardContent {
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .cardTitle {
-  font-size: 0.62rem;
+  font-size: 0.85rem;
   color: #eaf4ff;
-  padding: 0.35rem 0.35rem 0.1rem;
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .rating {
   color: #ffd35c;
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   letter-spacing: 0.06em;
-  padding: 0 0.35rem 0.4rem;
+  margin-bottom: 0.2rem;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+.type {
+  color: #91adc8;
+  font-size: 0.65rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
