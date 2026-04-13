@@ -2,15 +2,21 @@ import type { Event } from '../types';
 
 export const events: Event[] = [
   {
-    title: 'Event 1',
-    year: '2023',
-    description: 'Description of the event',
-    image: ''
+    title: 'Swiss und die Andern',
+    year: '2024',
+    description: 'Schlachthof Wiesbaden',
+    image: '/images/artists/Swiss und die andern.jpg',
   },
   {
-    title: 'Event 2',
-    year: '2022',
-    description: 'Description of the event',
-    image: ''
-  }
+    title: 'Finch',
+    year: '2024',
+    description: 'IGA Park Rostock',
+    image: '/images/artists/finch.jpg',
+  },
+  {
+    title: 'Rocco del Schlacko',
+    year: '2024',
+    description: 'Festival in Püttlingen',
+    image: '/images/artists/rocco.jpeg',
+  },
 ];

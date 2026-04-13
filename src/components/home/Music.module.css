@@ -1,64 +1,59 @@
 .section {
-  padding: 6rem 8vw;
-  max-width: 1200px;
-  margin: 0 auto 4rem auto;
-  background: none;
-  box-sizing: border-box;
-  border-top: 1px solid var(--border-color);
-  padding-top: 4rem;
+  padding: 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(80, 214, 255, 0.45);
+  background: linear-gradient(170deg, rgba(4, 17, 33, 0.95), rgba(2, 9, 21, 0.95));
+  box-shadow: 0 0 16px rgba(56, 198, 255, 0.2);
 }
 
 .sectionTitle {
-  text-align: left;
-  margin-bottom: 2.8rem;
-  color: var(--accent-color);
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-}
-
-.content {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  padding: 2rem;
-  background-color: var(--card-bg);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.comingSoon {
   text-align: center;
-  color: var(--text-color);
-  font-size: 1.5rem;
-  margin: 0;
+  color: #f2f9ff;
+  font-size: 1.4rem;
+  font-weight: 800;
 }
 
-.links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+.subtitle {
+  color: #91adc8;
+  text-align: center;
+  font-size: 0.78rem;
+  margin: 0.1rem 0 0.9rem;
 }
 
-.platformLink {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  background: var(--accent-color);
-  color: var(--primary-color);
-  text-decoration: none;
-  border-radius: 2rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  transition: background 0.3s;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.55rem;
 }
 
-.platformLink:hover {
-  background: var(--accent-hover);
+.card {
+  background: rgba(8, 19, 34, 0.95);
+  border-radius: 0.6rem;
+  border: 1px solid rgba(92, 171, 255, 0.3);
+  overflow: hidden;
 }
 
-.platformLink i {
-  font-size: 1.2rem;
+.poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.cardTitle {
+  font-size: 0.62rem;
+  color: #eaf4ff;
+  padding: 0.35rem 0.35rem 0.1rem;
+}
+
+.rating {
+  color: #ffd35c;
+  font-size: 0.58rem;
+  letter-spacing: 0.06em;
+  padding: 0 0.35rem 0.4rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
